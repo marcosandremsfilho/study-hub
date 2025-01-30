@@ -1,0 +1,31 @@
+19:19:15 **** Incremental Build of configuration Debug for project UsingESCWithSTM32 ****
+make -j8 all 
+arm-none-eabi-g++ "../CPP/Src/LED.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F405xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/GitHub/Aleatorios/STM32/UsingESCWithSTM32/Core/Inc" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"CPP/Src/LED.d" -MT"CPP/Src/LED.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "CPP/Src/LED.o"
+arm-none-eabi-g++ "../CPP/Src/MOTOR.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F405xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/GitHub/Aleatorios/STM32/UsingESCWithSTM32/Core/Inc" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"CPP/Src/MOTOR.d" -MT"CPP/Src/MOTOR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "CPP/Src/MOTOR.o"
+arm-none-eabi-g++ "../CPP/Src/RobotDirection.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F405xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/GitHub/Aleatorios/STM32/UsingESCWithSTM32/Core/Inc" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"CPP/Src/RobotDirection.d" -MT"CPP/Src/RobotDirection.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "CPP/Src/RobotDirection.o"
+arm-none-eabi-g++ "../CPP/Src/mainCPP.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F405xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/GitHub/Aleatorios/STM32/UsingESCWithSTM32/Core/Inc" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"CPP/Src/mainCPP.d" -MT"CPP/Src/mainCPP.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "CPP/Src/mainCPP.o"
+../CPP/Src/LED.cpp:1:10: fatal error: LED.h: No such file or directory
+    1 | #include "LED.h"
+      |          ^~~~~~~
+../CPP/Src/RobotDirection.cpp:1:10: fatal error: RobotDirection.h: No such file or directory
+    1 | #include "RobotDirection.h"
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+compilation terminated.
+make: *** [CPP/Src/subdir.mk:28: CPP/Src/RobotDirection.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [CPP/Src/subdir.mk:28: CPP/Src/LED.o] Error 1
+../CPP/Src/MOTOR.cpp:2:10: fatal error: MOTOR.h: No such file or directory
+    2 | #include "MOTOR.h"
+      |          ^~~~~~~~~
+compilation terminated.
+../CPP/Src/mainCPP.cpp:2:10: fatal error: LED.h: No such file or directory
+    2 | #include "LED.h"
+      |          ^~~~~~~
+compilation terminated.
+make: *** [CPP/Src/subdir.mk:28: CPP/Src/MOTOR.o] Error 1
+make: *** [CPP/Src/subdir.mk:28: CPP/Src/mainCPP.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+19:19:16 Build Failed. 9 errors, 0 warnings. (took 869ms)
+

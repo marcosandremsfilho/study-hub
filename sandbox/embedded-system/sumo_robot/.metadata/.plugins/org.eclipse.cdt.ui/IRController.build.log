@@ -1,0 +1,74 @@
+10:44:06 **** Incremental Build of configuration Debug for project IRController ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F405xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F405xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F405xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F405xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F405xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F405xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+../Core/Src/main.c: In function 'Remote_Init':
+../Core/Src/main.c:62:7: error: 'GPIO_TypeDef' has no member named 'CRL'
+   62 |  GPIOB->CRL&=0XFFFFFFF0; //PB0  Input
+      |       ^~
+../Core/Src/main.c:63:7: error: 'GPIO_TypeDef' has no member named 'CRL'
+   63 |  GPIOB->CRL|=0X00000008; // Pull up input
+      |       ^~
+../Core/Src/main.c:76:4: warning: implicit declaration of function 'MY_NVIC_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+   76 |    MY_NVIC_Init(1,3,TIM3_IRQn,2);// preemption 1, Sub priority 3, Group 2
+      |    ^~~~~~~~~~~~
+      |    MX_GPIO_Init
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:80:1: error: unknown type name 'u8'
+   80 | u8  RmtSta=0;
+      | ^~
+../Core/Src/main.c:81:1: error: unknown type name 'u16'
+   81 | u16 Dval;  // The value of the counter at the falling edge
+      | ^~~
+../Core/Src/main.c:82:1: error: unknown type name 'u32'
+   82 | u32 RmtRec=0; // Infrared received data
+      | ^~~
+../Core/Src/main.c:83:1: error: unknown type name 'u8'
+   83 | u8  RmtCnt=0; // The number of key presses
+      | ^~
+../Core/Src/main.c: In function 'TIM4_IRQHandler':
+../Core/Src/main.c:88:5: error: unknown type name 'u16'
+   88 |     u16 tsr;
+      |     ^~~
+../Core/Src/main.c:111:6: error: 'RDATA' undeclared (first use in this function)
+  111 |   if(RDATA)// Rising edge capture
+      |      ^~~~~
+../Core/Src/main.c:111:6: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:160:1: error: unknown type name 'u8'
+  160 | u8 Remote_Scan(void)
+      | ^~
+../Core/Src/main.c: In function 'Remote_Scan':
+../Core/Src/main.c:163:2: error: unknown type name 'u8'
+  163 |  u8 sta=0;
+      |  ^~
+../Core/Src/main.c:164:5: error: unknown type name 'u8'
+  164 |     u8 t1,t2;
+      |     ^~
+../Core/Src/main.c:170:16: error: 'u8' undeclared (first use in this function)
+  170 |       if((t1==(u8)~t2)&&t1==REMOTE_ID)// Verify the remote control identification code (ID) And address
+      |                ^~
+../Core/Src/main.c:170:19: error: expected ')' before '~' token
+  170 |       if((t1==(u8)~t2)&&t1==REMOTE_ID)// Verify the remote control identification code (ID) And address
+      |          ~        ^
+      |                   )
+../Core/Src/main.c:170:29: error: 'REMOTE_ID' undeclared (first use in this function)
+  170 |       if((t1==(u8)~t2)&&t1==REMOTE_ID)// Verify the remote control identification code (ID) And address
+      |                             ^~~~~~~~~
+../Core/Src/main.c:175:21: error: expected ')' before '~' token
+  175 |          if(t1==(u8)~t2)sta=t1;// The key value is correct
+      |            ~        ^
+      |                     )
+../Core/Src/main.c:164:11: warning: variable 't2' set but not used [-Wunused-but-set-variable]
+  164 |     u8 t1,t2;
+      |           ^~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+10:44:07 Build Failed. 17 errors, 2 warnings. (took 816ms)
+

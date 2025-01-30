@@ -1,0 +1,10 @@
+#ifndef INC_MAINCPP_H_
+#define INC_MAINCPP_H_
+
+#include "main.c"
+#include "main.h"
+
+
+
+
+#endif /* INC_MAINCPP_H_ */

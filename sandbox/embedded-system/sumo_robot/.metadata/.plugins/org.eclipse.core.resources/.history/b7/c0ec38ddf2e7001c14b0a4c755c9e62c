@@ -1,0 +1,16 @@
+/*
+ * maincpp.cpp
+ *
+ *  Created on: Jun 5, 2022
+ *      Author: marco
+ */
+#include "main.h"
+#include "main.c"
+
+void CppMain() {
+	HAL_GPIO_WritePin(GPIO_Led1_Port, GPIO_Led1_Pin, 0);
+	HAL_GPIO_WritePin(GPIO_Led2_Port, GPIO_Led2_Pin, 0);
+	HAL_GPIO_WritePin(GPIO_Led3_Port, GPIO_Led3_Pin, 0);
+	HAL_GPIO_WritePin(GPIO_Led4_Port, GPIO_Led4_Pin, 0);
+}
+

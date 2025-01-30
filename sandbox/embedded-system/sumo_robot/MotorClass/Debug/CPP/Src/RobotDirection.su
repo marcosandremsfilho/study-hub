@@ -1,0 +1,7 @@
+../CPP/Src/RobotDirection.cpp:5:1:RobotDirection::RobotDirection(MOTOR*, MOTOR*)	24	static
+../CPP/Src/RobotDirection.cpp:10:6:void RobotDirection::forward(int, int)	24	static
+../CPP/Src/RobotDirection.cpp:17:6:void RobotDirection::backward(int, int)	24	static
+../CPP/Src/RobotDirection.cpp:24:6:void RobotDirection::left(int, int)	24	static
+../CPP/Src/RobotDirection.cpp:31:6:void RobotDirection::right(int, int)	24	static
+../CPP/Src/RobotDirection.cpp:38:1:RobotDirection::~RobotDirection()	16	static
+../CPP/Src/RobotDirection.cpp:38:1:virtual RobotDirection::~RobotDirection()	16	static

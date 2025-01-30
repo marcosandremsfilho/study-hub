@@ -1,0 +1,6 @@
+D:/GitHub/Aleatorios/STM32/Robot/CPP/Inc/MOTOR.h:19:10:MOTOR::~MOTOR()	16	static
+D:/GitHub/Aleatorios/STM32/Robot/CPP/Inc/MOTOR.h:19:10:virtual MOTOR::~MOTOR()	16	static
+../CPP/Src/mainCpp.cpp:26:6:void mainCpp()	8	static
+../CPP/Src/mainCpp.cpp:52:1:void __static_initialization_and_destruction_0(int, int)	32	static
+../CPP/Src/mainCpp.cpp:52:1:cpp)	8	static
+../CPP/Src/mainCpp.cpp:52:1:cpp)	8	static

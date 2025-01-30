@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;TestingCPluPlus/Core/Src/codigoPrincipal&apos; to &apos;codigoPrincipal.cpp&apos;" description="Rename resource &apos;codigoPrincipal&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/codigoPrincipal" name="codigoPrincipal.cpp" stamp="1654461038977" updateReferences="true"/>
+</session>

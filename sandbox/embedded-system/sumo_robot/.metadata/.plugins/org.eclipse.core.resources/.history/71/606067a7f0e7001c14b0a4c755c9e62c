@@ -1,0 +1,12 @@
+/*
+ * maincpp.cpp
+ *
+ *  Created on: Jun 5, 2022
+ *      Author: marco
+ */
+#include "main.h"
+
+void CppMain() {
+	HAL_GPIO_WritePin(GPIOx, GPIO_Pin, PinState), GPIO_Pin, PinState), GPIO_Pin, PinState)
+}
+

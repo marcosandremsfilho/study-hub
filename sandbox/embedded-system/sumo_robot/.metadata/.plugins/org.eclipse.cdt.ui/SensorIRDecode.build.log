@@ -1,0 +1,10 @@
+17:54:43 **** Build of configuration Debug for project SensorIRDecode ****
+make -j8 all 
+arm-none-eabi-size   SensorIRDecode.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10352	     20	   1668	  12040	   2f08	SensorIRDecode.elf
+Finished building: default.size.stdout
+ 
+
+17:54:44 Build Finished. 0 errors, 0 warnings. (took 256ms)
+

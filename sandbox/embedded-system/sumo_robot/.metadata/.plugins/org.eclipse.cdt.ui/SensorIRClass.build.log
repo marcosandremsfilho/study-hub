@@ -1,0 +1,10 @@
+20:44:22 **** Incremental Build of configuration Debug for project SensorIRClass ****
+make -j8 all 
+arm-none-eabi-size   SensorIRClass.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16220	     28	   2772	  19020	   4a4c	SensorIRClass.elf
+Finished building: default.size.stdout
+ 
+
+20:44:22 Build Finished. 0 errors, 0 warnings. (took 858ms)
+

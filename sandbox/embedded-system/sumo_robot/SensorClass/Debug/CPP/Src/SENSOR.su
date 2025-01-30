@@ -1,0 +1,4 @@
+../CPP/Src/SENSOR.cpp:4:1:SENSOR::SENSOR(GPIO_TypeDef*, uint16_t)	24	static
+../CPP/Src/SENSOR.cpp:10:5:int SENSOR::SensorRead()	24	static
+../CPP/Src/SENSOR.cpp:18:1:SENSOR::~SENSOR()	16	static
+../CPP/Src/SENSOR.cpp:18:1:virtual SENSOR::~SENSOR()	16	static

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;UsingESCWithSTM32/CPP/Inc/mainCPP.h&apos;" deleteContents="false" description="Delete resource &apos;UsingESCWithSTM32/CPP/Inc/mainCPP.h&apos;" element1="/UsingESCWithSTM32/CPP/Inc/mainCPP.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1658090552828"/>
+</session>
