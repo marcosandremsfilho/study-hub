@@ -1,4 +1,0 @@
-../CPP/Src/LED.cpp:3:1:LED::LED(GPIO_TypeDef*, uint16_t)	24	static
-../CPP/Src/LED.cpp:8:1:LED::~LED()	16	static
-../CPP/Src/LED.cpp:8:1:virtual LED::~LED()	16	static
-../CPP/Src/LED.cpp:12:6:void LED::led_control(int)	16	static
