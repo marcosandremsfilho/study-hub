@@ -1,0 +1,26 @@
+#include "main.h"
+#include "sensorIrClass.h"
+
+extern uint16_t microsecondsTime;
+
+void SensorIR::getTime() {
+	if(ignoreFirstSignal == 0 && ignoreSecondSignal == 0) {
+		ignoreFirstSignal = 1;
+	} else if(ignoreFirstSignal == 0 && ignoreSecondSignal == 0) {
+		ignoreFirstSignal = 1;
+	} else if (position == 0 && lockInicial == 0) {
+		microsecondsTime = 0;
+		position = 1;
+		lockInicial = 1;
+
+	}  else if (position == 1 && lockFinal == 0) {
+		time = microsecondsTime;
+		position = 0;
+		lockInicial = 1;
+		lockFinal = 1;
+	}
+}
+
+void SensorIR::decodeNECSignalFunction() {
+
+}

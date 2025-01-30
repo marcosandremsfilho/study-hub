@@ -1,0 +1,23 @@
+#include "main.h"
+#include "sensorIrClass.h"
+
+extern uint16_t microsecondsTime;
+
+void SensorIR::getTime() {
+	if (position == 0 && lockInicial == 0) {
+		microsecondsTime = 0;
+		position = 1;
+		lockInicial = 1;
+		primeiro = HAL_GPIO_ReadPin(SensorIR_GPIO_Port, SensorIR_Pin);
+	}  else if (position == 1 && lockFinal == 0) {
+		time = microsecondsTime;
+		position = 0;
+		lockInicial = 0;
+		lockFinal = 1;
+		segundo = HAL_GPIO_ReadPin(SensorIR_GPIO_Port, SensorIR_Pin);
+	}
+}
+
+void SensorIR::decodeNECSignalFunction() {
+
+}
