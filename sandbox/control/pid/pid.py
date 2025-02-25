@@ -13,14 +13,17 @@ class pidController:
         self._last_time = time.time()
         self._last_error = None
 
-        self._proportional = None
-        self._integrative = None
-        self._derivative = None
+        self._proportional = 0
+        self._integrative = 0
+        self._derivative = 0
 
         self._integrative_limit = 800
 
     def set_setpoint(self, setpoint):
         self.setpoint = setpoint
+
+    def get_setpoint(self):
+        return self.setpoint
 
     def _clamp(self, value, limits):
         lower, upper = limits
@@ -43,15 +46,13 @@ class pidController:
         if dt < 1e-6:
             dt = 1e-6
 
-        print(f"Error: {error} dt: {dt}")
         self._proportional = self.kp * error
-        self._integrative = self.ki * error * dt
+        self._integrative += self.ki * error * dt
         self._derivative = (self.kd * derivative_error) / dt
 
         self._integrative = self._clamp(self._integrative, [0.1, 100])
-        self._derivative = self._clamp(self._derivative, [0.1, 100])
+
         self._last_error = error
         self._last_time = now
 
-        print(f"P: {self._proportional} I: {self._integrative} D: {self._derivative}")
         return self._proportional + self._integrative + self._derivative
